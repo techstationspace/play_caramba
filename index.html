@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Prove di Js</title>
+    <script>
+        let serieTv = [];
+        serieTv.push({
+            title: "La casa di carta",
+            original_title: "La casa de papel",
+            description: " carta Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            img: "https://nssdata.s3.amazonaws.com/images/galleries/16184/la-casa-de-papel-cover(1).jpg",
+            year: 2017,
+            rating: 6
+        });
+        serieTv.push({
+            title: "Breaking Bad",
+            original_title: "Breaking Bad",
+            description: "BB Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            img: "https://images.everyeye.it/img-articoli/breaking-bad-storia-successo-importanza-serie-vince-gilligan-v5-47057.jpg",
+            year: 2014,
+            rating: 8
+        });
+        serieTv.push({
+            title: "Dexter",
+            original_title: "Dexter",
+            description: " DEX Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            img: "https://images-na.ssl-images-amazon.com/images/S/sgp-catalog-images/region_GLOBAL/showtime-DEXTER_7_IN-Full-Image_GalleryCover-in-IN-1480722420784._UY500_UX667_RI_Vi9lf7sr8wLDSEjVVFRWg3DD2hS8MQVP5_TTW_.jpg",
+            year: 2010,
+            rating: 7
+        });
+
+        function getRandomSeries(allSeries) {
+            return allSeries[getRandomInt(allSeries.length)];
+        }
+
+        function getRandomInt(max) {
+            return Math.floor(Math.random() * Math.floor(max));
+        }
+
+        function shuffle(serieTv) {
+            let serieSelezionata = getRandomSeries(serieTv);
+            console.log(serieSelezionata);
+
+            //let title_holder = document.querySelectorAll('#random_choice .card-title');
+            let title_holder = document.querySelectorAll('#random_choice .card-title');
+            title_holder[0].innerText = serieSelezionata.title;
+            console.log(serieSelezionata.description);
+            // console.log(title_holder[0]);
+        }
+    </script>
+</head>
+
+
+<body>
+    <div class="container" style="margin-top:30px;">
+        <!-- Content here -->
+        <div class="card" style="width: 18rem;" id="random_choice">
+            <img src="pippo.jpg" class="card-img-top">
+
+            <div class="card-title">
+                titolo
+            </div>
+            <div class="card-body">
+                <p class="card-text"></p>
+            </div>
+        </div>
+        <p>bla bla bla</p>
+    </div>
+    <div class="container"><img></div>
+    <script>
+        shuffle(serieTv);
+    </script>
+</body>
+
+</html>
